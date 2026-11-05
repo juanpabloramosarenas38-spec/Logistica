@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoGlow</title>
+            <style>
+ * {
+    box-sizing: border-box;
+}
+/* Colores--> */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.titulo {
+    background:linear-gradient(50deg, #00CCCC, #66FF66);
+    padding: 20px;
+    max-width: 2900px;
+    text-align: center;
+}
+
+.titulo h1 {
+    margin: 0;
+}
+.a{
+    background-color: #4C99CC;
+    padding: 30px;
+    text-align:left ;
+    max-width: 2000px;
+    object-fit: cover;
+  
+}
+
+.b {
+    background-color: #4C99CC;
+    padding: 30px;
+    text-align: left;
+    max-width: 4000px;
+    object-fit: cover;
+
+}
+
+.bb{
+    background:linear-gradient(60deg, #00CCCC, #66FF66);
+    padding: 30px;
+    text-align: left;
+    max-width: 4000px;
+    object-fit: cover;
+}
+
+.c {
+    background:linear-gradient(60deg, #00CCCC, #66FF66);
+    padding: 30px;
+    text-align:left;
+    overflow-wrap: break-word;
+    width: 100%;
+    max-width: 1900px;
+}
+.d {
+    background:linear-gradient(60deg, #00CCCC, #66FF66);
+    padding: 30px;
+    text-align:left;
+    overflow-wrap: break-word;
+    width: 100%;
+    max-width: 1900px;
+}
+.e {
+    background-color: #4C99CC;
+    padding: 30px;
+    text-align:left;
+    overflow-wrap: break-word;
+    width: 100%;
+    height: 100%;
+    max-width: 1900px;
+    max-height: 90px;
+}
+.f {
+   background:linear-gradient(60deg, #00CCCC, #66FF66);
+    text-align:left;
+    overflow-wrap: break-word;
+    width: 100%;
+    height: 100%;
+    max-width: 1900px;
+    
+}
+
+li {
+    color: rgb(6, 1, 41);
+    margin: 8px 0;
+}
+
+h2 {
+    color: rgb(222, 26, 26);
+}
+/* acomodo */
+
+.centrado {
+    
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #4C9900;
+
+}
+.isquierda {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    border: 4px solid #4C9900;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* condicionales--> */
+
+.galeria img {
+    width: 220px;
+    height: 190px;
+    object-fit: cover;
+}
+.galeria iframe {
+    width: 220px;
+    height: 190px;
+    object-fit: cover;
+}
+/* calificanos */
+        .g{
+            background:linear-gradient(60deg, #00CCCC, #66FF66);
+            width: 600px;
+            height: 600px;
+            border: 4px solid #4C9900;
+        }
+
+        h3{
+            text-align: center;
+        }
+        .h4{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        border-radius: 20px;
+        }
+/* tabla */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+}        
+th, td{
+    border: 1px solid #c42222;
+    padding: 10px;
+    text-align: center;
+}
+.celda-blanca{
+    background-color: aliceblue;
+    height: 56px;
+}
+.celda-gris{
+    background-color: gray;
+    height: 56px;
+}
+.titulot{
+    background-color: chartreuse;
+}
+        /* Ocultamos ambas secciones por defecto */
+        .seccion {
+            display: none;
+            padding: 20px;
+        }
+
+        .seccion:target {
+            display: block;
+        }
+
+        #inicio {
+            display: block;
+        }
+        body:has(:target) #inicio:not(:target) {
+            display: none;
+        }
+
+
+/* Ajustes para que la página se adapte a distintos tamaños de pantalla */
+img, iframe, input, textarea, button {
+    max-width: 100%;
+}
+
+p, li, h1, h2, h3, label {
+    overflow-wrap: anywhere;
+}
+
+.centrado, .isquierda {
+    width: 100%;
+}
+
+.b, .c, .d, .e, .f, .a, .bb {
+    min-width: 0;
+    width: 100%;
+}
+
+.b {
+    max-width: 300px;
+}
+
+.g {
+    width: 100%;
+    max-width: 6000px;
+    min-height: 0;
+    height: auto;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.g form input[type="text"],
+.g form input[type="email"] {
+    width: 100%;
+    max-width: 320px;
+}
+
+.g form label {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.g form .h {
+    margin: 12px 0;
+}
+
+.g form button {
+    margin-top: 16px;
+    padding: 10px 16px;
+}
+
+.galeria img,
+.galeria iframe {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 22 / 19;
+    object-fit: cover;
+}
+nav {
+            background-color: #1a1a1a;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover { color: #E10600; }
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .titulo {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+    }
+
+    .titulo h1 {
+        font-size: clamp(1.25rem, 5vw, 2rem);
+    }
+
+    .b, .c, .d, .e, .f, .a, .bb {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .galeria {
+        gap: 12px;
+    }
+
+    .galeria img,
+    .galeria iframe {
+        max-width: 100%;
+        flex: 1 1 140px;
+    }
+
+    .g {
+        padding: 14px;
+    }
+
+    .f h2 {
+        font-size: 1rem;
+    }
+}
+/* ADAPTACIÓN PARA TODOS LOS DISPOSITIVOS */
+
+/* Evitar que los elementos se salgan de la pantalla */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Título adaptable */
+.titulo {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-wrap: anywhere;
+}
+
+.titulo h1 {
+    font-size: clamp(22px, 4vw, 42px);
+}
+
+/* Menú adaptable */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+nav a {
+    margin: 5px;
+    padding: 8px 10px;
+}
+
+/* Contenedores flexibles */
+.centrado,
+.isquierda {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.isquierda {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.isquierda > .a,
+.isquierda > .b,
+.isquierda > .bb,
+.isquierda > .c,
+.isquierda > .d,
+.isquierda > .e,
+.isquierda > .f {
+    flex: 1 1 300px;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* Evitar alturas fijas que corten el contenido */
+.e {
+    height: auto;
+    max-height: none;
+    min-height: 0;
+}
+
+.f {
+    padding: 20px;
+}
+
+.f h2 {
+    overflow-wrap: anywhere;
+}
+
+/* Imágenes y videos adaptables */
+img,
+iframe,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.galeria img,
+.galeria iframe {
+    flex: 1 1 220px;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+}
+
+.galeria iframe {
+    border: 0;
+}
+
+/* Tabla: permitir desplazamiento horizontal */
+.bb {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bb table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    overflow-wrap: break-word;
+}
+
+/* Formulario adaptable */
+.g {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-width: 0;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.g form {
+    width: 100%;
+    max-width: 100%;
+}
+
+.g form label {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.g form input[type="text"],
+.g form input[type="email"] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-top: 6px;
+    padding: 10px;
+}
+
+.g form input[type="radio"] {
+    width: auto;
+    max-width: 100%;
+}
+
+.g form button {
+    max-width: 100%;
+    padding: 12px 16px;
+    overflow-wrap: anywhere;
+}
+
+/* Evitar desbordamientos de texto */
+p,
+li,
+h1,
+h2,
+h3,
+label,
+td,
+th {
+    overflow-wrap: anywhere;
+}
+
+input,
+textarea,
+button,
+select {
+    max-width: 100%;
+    font: inherit;
+}
+
+/* TABLETAS */
+@media (max-width: 900px) {
+    body {
+        padding: 15px;
+    }
+
+    .a,
+    .b,
+    .bb,
+    .c,
+    .d,
+    .e,
+    .f {
+        padding: 20px;
+    }
+
+    .isquierda > .a,
+    .isquierda > .b {
+        flex-basis: 250px;
+    }
+
+    .galeria {
+        gap: 15px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    .titulo {
+        padding: 14px;
+    }
+
+    .titulo h1 {
+        font-size: clamp(20px, 6vw, 30px);
+    }
+
+    nav {
+        gap: 4px;
+        padding: 8px 4px;
+    }
+
+    nav a {
+        margin: 2px;
+        padding: 8px 6px;
+        font-size: 14px;
+    }
+
+    .isquierda {
+        flex-direction: column;
+    }
+
+    .isquierda > .a,
+    .isquierda > .b,
+    .isquierda > .bb,
+    .isquierda > .c,
+    .isquierda > .d,
+    .isquierda > .e,
+    .isquierda > .f {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 14px;
+    }
+
+    .galeria {
+        gap: 12px;
+    }
+
+    .galeria img,
+    .galeria iframe {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .g {
+        padding: 14px;
+    }
+
+    .g form button {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    .f h2 {
+        font-size: 16px;
+    }
+}
+
+/*  CELULARES MUY PEQUEÑOS*/
+@media (max-width: 360px) {
+    body {
+        padding: 5px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 7px 4px;
+    }
+
+    .titulo h1 {
+        font-size: 20px;
+    }
+
+    .isquierda > .a,
+    .isquierda > .b,
+    .isquierda > .bb,
+    .isquierda > .c,
+    .isquierda > .d,
+    .isquierda > .e,
+    .isquierda > .f {
+        padding: 10px;
+    }
+}
+
+    </style>
+    </head>
+    <body>
+    <div class="centrado">
+        <div class="titulo">
+            <h1>EcoGlow autolavado</h1>
+        </div>
+    </div>
+    <div class="centrado">
+        <div style="background:linear-gradient(60deg, #339999, #66cb66);">
+            <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#buzon">Buzon</a>
+    </nav>
+    </div>
+    </div>
+<div id="inicio" class="seccion"   >
+    <div class="isquierda">
+        <div class="b">
+
+        </div>
+        <div class="a">
+
+        </div>
+    </div>
+        <div class="isquierda">
+        <div class="d">
+                     <div class="c">
+            <h1>¡Bienvenido a EcoGlow! 🚗✨🍃</h1>
+ <p>El cuidado perfecto para tu auto, el respeto que merece el planeta.</p>
+ <p>En EcoGlow, revolucionamos la forma de mantener tu vehículo impecable. Nos dedicamos al lavado y detallado automotriz profesional con un compromiso firme: ofrecer la máxima calidad sin desperdiciar los recursos de nuestro entorno.
+Sabemos lo importante que es para ti lucir un coche limpio, radiante y protegido, pero también entendemos la urgencia de cuidar el agua y reducir nuestro impacto ambiental. Por eso, hemos desarrollado un sistema de lavado sostenible que combina tecnología de vanguardia, productos biodegradables y un consumo responsable de agua.
+🌿 ¿Por qué elegirnos? Beneficios para el Medio Ambiente</p>
+<p> * Ahorro masivo de agua: Mientras que un lavado tradicional gasta entre 100 y 250 litros por vehículo, nuestro método ecológico reduce el consumo a un mínimo sorprendente (o incluso lavado en seco / a vapor según tu método), evitando el desperdicio innecesario.</p>
+<p> * Productos 100% biodegradables y no tóxicos: Utilizamos insumos respetuosos con la naturaleza que se degradan de forma natural sin dejar residuos contaminantes ni químicos nocivos en el subsuelo.</p>
+<p> * Cero vertidos nocivos: Evitamos que detergentes pesados, aceites y contaminantes fluyan directo a los drenajes y ríos locales.</p>
+<div class="galeria">
+                <img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (6).jpeg" alt="imagen relleno">
+            </div>
+         </div>
+     </div>
+    </div>
+    <section id="1">
+     <div class="isquierda">
+         <div class="c">
+             <h1>Paquetes</h1>
+            <p>Prueba de escritura:informaciónaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaggggggggggggggggggggggggggggggssssssssssssssssssssssjjjjjjjjjjjjjjjjjjjjjjjjssssssssssssssssssssssmmmmmmmmmm</p>
+
+         </div>
+     </div>    
+     <div class="isquierda">
+         <div class="bb">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="titulot">Tipo de vehiculo:</th>
+                        <th class="titulot">Expréss</th>
+                        <th class="titulot">Normal</th>
+                        <th class="titulot">Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="celda-gris"><a href="#a">Auto</a></td>
+                        <td class="celda-gris">$75</td>
+                        <td class="celda-gris">$140</td>
+                        <td class="celda-gris">$200</td>
+                    </tr>
+                    <tr>
+                        <td class="celda-gris"><a href="#p"> Camioneta pick up</a></td>
+                        <td class="celda-blanca">$100</td>
+                        <td class="celda-blanca">$160</td>
+                        <td class="celda-blanca">$220</td>
+                    </tr>
+                    <tr>
+                        <td class="celda-gris"><a href="#s"> Camioneta Sub pick up</a></td>
+                        <td class="celda-gris">$125</td>
+                        <td class="celda-gris">$180</td>
+                        <td class="celda-gris">$240</td>
+                    </tr>
+                    <tr>
+                        <td class="celda-gris"><a href="#m"> Motos</a></td>
+                        <td class="celda-blanca">$80</td>
+                        <td class="celda-blanca">N/A</td>
+                        <td class="celda-blanca">N/A</td>
+                    </tr>
+                    <tr>
+                        <td class="celda-gris"><img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (3).jpeg"></td>
+                        <td class="celda-gris"><img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM.jpeg"></td>
+                        <td class="celda-gris"><img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (1).jpeg"></td>
+                        <td class="celda-gris"><img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (4).jpeg"></td>
+                    </tr>
+                </tbody>
+            </table>
+         </div>
+     </div>  
+    </section>  
+</div> 
+<div id="nosotros" class="seccion">
+    <div class="isquierda">
+         <div class="c">
+            <h1>¡Bienvenido a EcoGlow! 🚗✨🍃</h1>
+ <p>El cuidado perfecto para tu auto, el respeto que merece el planeta.</p>
+ <p>En EcoGlow, revolucionamos la forma de mantener tu vehículo impecable. Nos dedicamos al lavado y detallado automotriz profesional con un compromiso firme: ofrecer la máxima calidad sin desperdiciar los recursos de nuestro entorno.
+Sabemos lo importante que es para ti lucir un coche limpio, radiante y protegido, pero también entendemos la urgencia de cuidar el agua y reducir nuestro impacto ambiental. Por eso, hemos desarrollado un sistema de lavado sostenible que combina tecnología de vanguardia, productos biodegradables y un consumo responsable de agua.
+🌿 ¿Por qué elegirnos? Beneficios para el Medio Ambiente</p>
+<p> * Ahorro masivo de agua: Mientras que un lavado tradicional gasta entre 100 y 250 litros por vehículo, nuestro método ecológico reduce el consumo a un mínimo sorprendente (o incluso lavado en seco / a vapor según tu método), evitando el desperdicio innecesario.</p>
+<p> * Productos 100% biodegradables y no tóxicos: Utilizamos insumos respetuosos con la naturaleza que se degradan de forma natural sin dejar residuos contaminantes ni químicos nocivos en el subsuelo.</p>
+<p> * Cero vertidos nocivos: Evitamos que detergentes pesados, aceites y contaminantes fluyan directo a los drenajes y ríos locales.</p>
+         </div>
+     </div>
+     <div class="isquierda">
+        <div class="d">
+            <h1>Espacio para relleno:</h1>
+            <p>Texto de relleno</p>
+            <div class="galeria">
+                <img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (6).jpeg" alt="imagen relleno">
+            </div>
+        </div>
+    </div>    
+</div>
+<div id="paquetes" class="seccion">
+    <div class="isquierda">
+         <div class="c">
+             <h1>Paquetes</h1>
+             <img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (7).jpeg">
+         </div>
+     </div>
+     <div class="isquierda">
+         <div class="bb">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="titulot">Tipo de vehiculo:</th>
+                        <th class="titulot">Expréss</th>
+                        <th class="titulot">Normal</th>
+                        <th class="titulot">Premium</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="celda-gris"><a href="#a">Auto</a></td>
+                        <td class="celda-gris">$75</td>
+                        <td class="celda-gris">$140</td>
+                        <td class="celda-gris">$200</td>
+                    </tr>
+                    <tr>
+                        <td class="celda-gris"><a href="#p"> Camioneta pick up</a></td>
+                        <td class="celda-blanca">$100</td>
+                        <td class="celda-blanca">$160</td>
+                        <td class="celda-blanca">$220</td>
+                    </tr>
+                    <tr>
+                        <td class="celda-gris"><a href="#s"> Camioneta Sub pick up</a></td>
+                        <td class="celda-gris">$125</td>
+                        <td class="celda-gris">$180</td>
+                        <td class="celda-gris">$240</td>
+                    </tr>
+                    <tr>
+                        <td class="celda-gris"><a href="#m"> Motos</a></td>
+                        <td class="celda-blanca">$80</td>
+                        <td class="celda-blanca">N/A</td>
+                        <td class="celda-blanca">N/A</td>
+                    </tr>
+                    <tr>
+                        <td class="celda-gris"><img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (3).jpeg"></td>
+                        <td class="celda-gris"><img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM.jpeg"></td>
+                        <td class="celda-gris"><img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (1).jpeg"></td>
+                        <td class="celda-gris"><img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (4).jpeg"></td>
+                    </tr>
+                </tbody>
+            </table>
+         </div>
+     </div>  
+</div>
+<div id="beneficios" class="seccion">
+    <div class="isquierda">
+         <div class="c">
+             <h1>Beneficios</h1>
+            <p>⭐ Beneficios Exclusivos para Ti y para tu Auto</p>
+<p>Cuidar el planeta no significa sacrificar el brillo ni el detalle. Al contrario, nuestro proceso ofrece resultados superiores a los métodos convencionales:</p>
+<ol type="I">
+ <li> Acabado y brillo impecable: Eliminamos la suciedad atrapándola de forma segura sin rayar la pintura, dejando un acabado espejo y una textura suave al tacto.</li>
+ <li> Protección duradera: Nuestros productos incluyen capas de cera o selladores ecológicos que repelen el polvo, protegen contra los rayos UV y mantienen tu auto limpio por más tiempo.</li>
+ <li> Cuidado integral de la pintura: Olvídate de los micro-rayones producidos por rodillos agresivos o cepillos desgastados de autocar wash tradicionales.</li>
+ <li> Interiores limpios y libres de químicos agresivos: Limpiamos y desinfectamos las tapicerías usando fórmulas ecológicas, creando un ambiente fresco, libre de olores químicos fuertes e ideal para la salud de tu familia.</li>
+</ol>
+ <img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (5).jpeg">
+ <p>💚 Tu auto impecable. Tu conciencia tranquila.
+Contratar EcoGlow es tomar una decisión inteligente: le das a tu auto un tratamiento de primera categoría mientras formas parte de un cambio positivo para el planeta.
+¡Haz tu cita hoy y descubre la diferencia de un lavado verdaderamente verde!
+📞 Teléfono / WhatsApp:<a href=" " target="_blank" >477 105 0319 </a>,<a href="" target="_blank">477 702 6058</a>
+🌐 Redes Sociales:<a href="" target="_blank">@luiscerroos</a> ,<a href=" @EcoGlow" target="_blank"></a> ,<a href="" target="_blank"> @notbrandoon</a>._</p>
+         </div>
+     </div>
+</div>
+<div id="buzon" class="seccion">  
+            <div class="centra">
+        <section class="g">
+         <h3>Calificanos</h3>
+         <form action="mailto:juanpabloramosarenas38@gmail.com" method="post" enctype="text/plain">
+            <div class="h">
+         <label>
+            Nombre de usuario:
+            <input type="text" name="Nombre">
+         </label>
+         </div>
+         <div class="h">
+         <label>
+            Correo elctronico:
+            <input type="email" name="Correo">
+         </label>
+         </div>
+            <p>Calificanos</p>
+            <div>
+     <label>
+        <input type="radio" name="Calificación" value="1">1
+        </label><br>
+        <label>
+        <input type="radio" name="Calificación" value="2">2
+        </label><br>
+        <label>
+        <input type="radio" name="Calificación" value="3">3
+         </label><br>
+        <label>
+        <input type="radio" name="Calificación" value="4">4
+         </label><br>   
+        <label>
+        <input type="radio" name="Calificación" value="5">5
+     </label>   
+     </div>       
+         <label>
+            <div>
+
+            </div>
+            <div class="h">
+            Como podemos mejorar:
+            <input type="text" name="Mejorar">
+         </label> 
+         </div>    
+            <button type="submit">Enviar Respuesta</button>
+         </form>
+        </section>
+        </div>
+</div>    
+<div id="a" class="seccion">
+        <div class="isquierda">
+         <div class="c">
+             <h1>Paquete Auto</h1>
+             <div class="galeria">
+             <img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (3).jpeg">
+             </div>
+             <section class="g">
+         <h3>Paquetes</h3>
+         <form action="mailto:juanpabloramosarenas38@gmail.com" method="post" enctype="text/plain">
+            <div class="h">
+         <label>
+            Nombre de usuario:
+            <input type="text" name="Nombre">
+         </label>
+         </div>
+         <div class="h">
+         <label>
+            Correo elctronico:
+            <input type="email" name="Correo">
+         </label>
+         </div>
+            <p>Paquetes:</p>
+            <div>
+     <label for="opciones">Paquete Principal:</label> 
+        <select id="opciones" name="opciones">
+            <option value="Expréss">Expréss </option>
+            <option value="Normal">Normal</option>
+            <option value="Premium">Premium</option>
+        </select>  
+        <div>
+        <label for="u">Paquete Secundaio:</label>
+        <select id="u" name="Paquete Secundaio">
+            <option value="Na">N/A</option>
+            <option value="Lavado de motor" >Lavado de motor $185</option>
+            <option value="Vestidura" >Vestidura $2200</option>
+            <option value="Pulido de corroceria" >Pulido de corroceria $900</option>
+            <option value="Pulido de faros" >Pulido de faros $450</option>
+        </select>
+        </div>
+     </div>       
+     <div>
+        <p>Dias de apartado</p>
+     </div>
+         <label for="op">Dia</label> 
+            <select id="op" name="Dias">
+            <option value="1">1 </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>  
+         <label for="mes">Mes:</label>
+<select id="mes" name="mes">
+  <option value="01">Enero</option>
+  <option value="02">Febrero</option>
+  <option value="03">Marzo</option>
+  <option value="04">Abril</option>
+  <option value="05">Mayo</option>
+  <option value="06">Junio</option>
+  <option value="07">Julio</option>
+  <option value="08">Agosto</option>
+  <option value="09">Septiembre</option>
+  <option value="10">Octubre</option>
+  <option value="11">Noviembre</option>
+  <option value="12">Diciembre</option>
+</select>
+<label for="anio">Año:</label>
+<select id="anio" name="anio">
+  <option value="2026">2026</option>
+  <option value="2027">2027</option>
+  <option value="2028">2028</option>
+  <!-- ... Todos los años intermedios ... -->
+  <option value="2248">2248</option>
+  <option value="2249">2249</option>
+  <option value="2250">2250</option>
+</select>
+            <button type="submit">Enviar Respuesta</button>
+         </form>
+        </section>
+        </div> 
+         </div>
+     </div>  
+<div id="p" class="seccion">
+        <div class="isquierda">
+         <div class="c">
+             <h1>Paquete pick up</h1>
+             <div class="galeria">
+             <img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM.jpeg">
+             </div>
+             <section class="g">
+         <h3>Paquetes</h3>
+         <form action="mailto:juanpabloramosarenas38@gmail.com" method="post" enctype="text/plain">
+            <div class="h">
+         <label>
+            Nombre de usuario:
+            <input type="text" name="Nombre">
+         </label>
+         </div>
+         <div class="h">
+         <label>
+            Correo elctronico:
+            <input type="email" name="Correo">
+         </label>
+         </div>
+            <p>Paquetes:</p>
+            <div>
+     <label for="opciones">Paquete Principal:</label> 
+        <select id="opciones" name="opciones">
+            <option value="Expréss">Expréss </option>
+            <option value="Normal">Normal</option>
+            <option value="Premium">Premium</option>
+        </select>  
+        <div>
+        <label for="u">Paquete Secundaio:</label>
+        <select id="u" name="Paquete Secundaio">
+            <option value="Na">N/A</option>
+            <option value="Lavado de motor" >Lavado de motor $185</option>
+            <option value="Vestidura" >Vestidura $2200</option>
+            <option value="Pulido de corroceria" >Pulido de corroceria $900</option>
+            <option value="Pulido de faros" >Pulido de faros $450</option>
+        </select>
+        </div>
+     </div>       
+     <div>
+        <p>Dias de apartado</p>
+     </div>
+         <label for="op">Dia</label> 
+            <select id="op" name="Dias">
+            <option value="1">1 </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>  
+         <label for="mes">Mes:</label>
+<select id="mes" name="mes">
+  <option value="01">Enero</option>
+  <option value="02">Febrero</option>
+  <option value="03">Marzo</option>
+  <option value="04">Abril</option>
+  <option value="05">Mayo</option>
+  <option value="06">Junio</option>
+  <option value="07">Julio</option>
+  <option value="08">Agosto</option>
+  <option value="09">Septiembre</option>
+  <option value="10">Octubre</option>
+  <option value="11">Noviembre</option>
+  <option value="12">Diciembre</option>
+</select>
+<label for="anio">Año:</label>
+<select id="anio" name="anio">
+  <option value="2026">2026</option>
+  <option value="2027">2027</option>
+  <option value="2028">2028</option>
+  <!-- ... Todos los años intermedios ... -->
+  <option value="2248">2248</option>
+  <option value="2249">2249</option>
+  <option value="2250">2250</option>
+</select>
+            <button type="submit">Enviar Respuesta</button>
+         </form>
+        </section>
+         </div>
+     </div>
+</div>   
+<div id="s" class="seccion">
+        <div class="isquierda">
+         <div class="c">
+             <h1>Paquete Sub pick up</h1>
+             <div class="galeria">
+             <img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (1).jpeg">
+             </div>
+             <section class="g">
+         <h3>Paquetes</h3>
+         <form action="mailto:juanpabloramosarenas38@gmail.com" method="post" enctype="text/plain">
+            <div class="h">
+         <label>
+            Nombre de usuario:
+            <input type="text" name="Nombre">
+         </label>
+         </div>
+         <div class="h">
+         <label>
+            Correo elctronico:
+            <input type="email" name="Correo">
+         </label>
+         </div>
+            <p>Paquetes:</p>
+            <div>
+     <label for="opciones">Paquete Principal:</label> 
+        <select id="opciones" name="opciones">
+            <option value="Expréss">Expréss </option>
+            <option value="Normal">Normal</option>
+            <option value="Premium">Premium</option>
+        </select>  
+        <div>
+        <label for="u">Paquete Secundaio:</label>
+        <select id="u" name="Paquete Secundaio">
+            <option value="Na">N/A</option>
+            <option value="Lavado de motor" >Lavado de motor $185</option>
+            <option value="Vestidura" >Vestidura $2200</option>
+            <option value="Pulido de corroceria" >Pulido de corroceria $900</option>
+            <option value="Pulido de faros" >Pulido de faros $450</option>
+        </select>
+        </div>
+     </div>       
+     <div>
+        <p>Dias de apartado</p>
+     </div>   
+         <label for="op">Dia</label> 
+            <select id="op" name="Dias">
+            <option value="1">1 </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>  
+         <label for="mes">Mes:</label>
+<select id="mes" name="mes">
+  <option value="01">Enero</option>
+  <option value="02">Febrero</option>
+  <option value="03">Marzo</option>
+  <option value="04">Abril</option>
+  <option value="05">Mayo</option>
+  <option value="06">Junio</option>
+  <option value="07">Julio</option>
+  <option value="08">Agosto</option>
+  <option value="09">Septiembre</option>
+  <option value="10">Octubre</option>
+  <option value="11">Noviembre</option>
+  <option value="12">Diciembre</option>
+</select>
+<label for="anio">Año:</label>
+<select id="anio" name="anio">
+  <option value="2026">2026</option>
+  <option value="2027">2027</option>
+  <option value="2028">2028</option>
+  <!-- ... Todos los años intermedios ... -->
+  <option value="2248">2248</option>
+  <option value="2249">2249</option>
+  <option value="2250">2250</option>
+</select>
+            <button type="submit">Enviar Respuesta</button>
+         </form>
+        </section>
+         </div>
+     </div>
+</div>   
+<div id="m" class="seccion">
+        <div class="isquierda">
+         <div class="c">
+             <h1>Paquete Moto</h1>
+             <div class="galeria">
+             <img src="imagenes\WhatsApp Image 2026-10-19 at 8.05.48 PM (4).jpeg">
+             </div>
+             <section class="g">
+         <h3>Paquetes</h3>
+         <form action="mailto:juanpabloramosarenas38@gmail.com" method="post" enctype="text/plain">
+            <div class="h">
+         <label>
+            Nombre de usuario:
+            <input type="text" name="Nombre">
+         </label>
+         </div>
+         <div class="h">
+         <label>
+            Correo elctronico:
+            <input type="email" name="Correo">
+         </label>
+         </div>
+            <p>Paquetes:</p>
+            <div>
+     <label for="opciones">Paquete Principal:</label> 
+        <select id="opciones" name="opciones">
+            <option value="Expréss">Expréss </option>
+            <option value="Normal">Normal</option>
+            <option value="Premium">Premium</option>
+        </select>  
+        <div>
+        <label for="u">Paquete Secundaio:</label>
+        <select id="u" name="Paquete Secundaio">
+            <option value="Na">N/A</option>
+            <option value="Na">N/A</option>
+            <option value="Na">N/A</option>
+            <option value="Na">N/A</option>
+            <option value="Na">N/A</option>
+        </select>
+        </div>
+     </div>       
+     <div>
+        <p>Dias de apartado</p>
+     </div>
+         <label for="op">Dia</label> 
+            <select id="op" name="Dias">
+            <option value="1">1 </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>  
+         <label for="mes">Mes:</label>
+<select id="mes" name="mes">
+  <option value="01">Enero</option>
+  <option value="02">Febrero</option>
+  <option value="03">Marzo</option>
+  <option value="04">Abril</option>
+  <option value="05">Mayo</option>
+  <option value="06">Junio</option>
+  <option value="07">Julio</option>
+  <option value="08">Agosto</option>
+  <option value="09">Septiembre</option>
+  <option value="10">Octubre</option>
+  <option value="11">Noviembre</option>
+  <option value="12">Diciembre</option>
+</select>
+<label for="anio">Año:</label>
+<select id="anio" name="anio">
+  <option value="2026">2026</option>
+  <option value="2027">2027</option>
+  <option value="2028">2028</option>
+  <!-- ... Todos los años intermedios ... -->
+  <option value="2248">2248</option>
+  <option value="2249">2249</option>
+  <option value="2250">2250</option>
+</select>
+            <button type="submit">Enviar Respuesta</button>
+         </form>
+        </section>
+         </div>
+     </div>
+</div>   
+   
+    <div style="border: 4px solid rgb(43, 3, 85) ;" class="isquierda">
+        <div class="f">
+            <h2>&copy; Proyecto para logistica </h2>
+        </div>
+    </div>      
+    </body>
+</html> 
